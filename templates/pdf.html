@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Chatbot</title>
+    <link rel="stylesheet" href="/static/pdf.css">
+</head>
+<body>
+    <h1>📂PDF ChatBot</h1>
+    <h3>Upload a PDF</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" required name="pdf"><br><br>
+        <label for="question">Question: </label>
+        <input type="text" name="question" required id="question"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    {% if answer %}
+        <h2>💬 Answer:</h2>
+        <p>{{ answer }}</p>
+
+        {% if sources %}
+            <h3>📄 Sources:</h3>
+            <ul>
+                {% for source in sources %}
+                    <li>{{ source }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+    <br>
+
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('text') }}">Text</a>
+    <a href="{{ url_for('youtube') }}">Youtube</a>
+</body>
+</html>

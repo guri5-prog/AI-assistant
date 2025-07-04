@@ -1,0 +1,80 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #f9f9fb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+label {
+    margin-right: 1.5rem;
+    font-weight: 500;
+}
+
+/* Button */
+button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    form {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.75rem;
+    }
+
+    input[type="radio"] {
+        margin-bottom: 0.25rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}

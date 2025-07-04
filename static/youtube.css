@@ -1,0 +1,111 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Form Container */
+form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Labels & Fields */
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="url"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Answer Section */
+hr {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+p, li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.answer-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    form {
+        margin: 1rem 0.5rem;
+        padding: 1rem;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}

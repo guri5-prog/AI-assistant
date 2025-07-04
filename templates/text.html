@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Chatbot</title>
+    <link rel="stylesheet" href="/static/text.css">
+</head>
+<body>
+    <h1>📃 Text ChatBot</h1>
+
+    <form method="POST">
+        <label for="pasted_text">Paste Your Text (notes, chapter, etc):</label><br>
+        <textarea name="pasted_text" rows="10" cols="80" required>{{ pasted_text }}</textarea><br><br>
+
+        <label for="question">Ask a Question:</label><br>
+        <input type="text" name="question" size="80" required value="{{ question }}"><br><br>
+
+        <button type="submit">Get Answer</button>
+    </form>
+
+    <hr>
+
+    {% if answer %}
+        <h2>💬 Answer:</h2>
+        <p>{{ answer }}</p>
+
+        {% if sources %}
+            <h3>📄 Sources:</h3>
+            <ul>
+                {% for source in sources %}
+                    <li>{{ source }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+<br>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('pdf') }}">PDF</a>
+    <a href="{{ url_for('youtube') }}">Youtube</a>
+</body>
+</html>

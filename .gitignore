@@ -1,0 +1,14 @@
+# Ignore virtual environment
+study_helper/Lib/
+study_helper/Scripts/
+study_helper/Include/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+index/
+upload/
+.env
+.DS_Store
