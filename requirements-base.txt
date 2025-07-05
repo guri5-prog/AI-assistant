@@ -1,0 +1,4 @@
+flask
+langchain
+transformers
+faiss-cpu
