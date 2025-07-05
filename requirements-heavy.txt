@@ -3,3 +3,5 @@ torchaudio
 pyaudio
 aubio
 grad-cam
+pypdf
+tqdm
