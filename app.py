@@ -16,8 +16,9 @@ from urllib.parse import urlparse, parse_qs
 from langchain_community.document_loaders import PyPDFLoader
 from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
 
-UPLOAD_FOLDER = 'upload'
 app = Flask(__name__)
+UPLOAD_FOLDER = 'upload'
+
 app.secret_key = os.urandom(24)
 app.permanent_session_lifetime = timedelta(minutes=30)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -229,6 +230,6 @@ def home():
     
     return render_template('choice.html')
         
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=8080)
 
