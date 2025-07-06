@@ -39,4 +39,4 @@ RUN pip install --no-cache-dir -r requirements-heavy.txt
 COPY . .
 
 # Default command
-CMD ["python", "app.py"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8080"]
