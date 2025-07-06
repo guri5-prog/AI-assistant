@@ -5,3 +5,4 @@ aubio
 grad-cam
 pypdf
 tqdm
+openai-whisper

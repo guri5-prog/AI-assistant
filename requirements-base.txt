@@ -7,3 +7,4 @@ transformers
 faiss-cpu
 pytube
 youtube-transcript-api
+gunicorn

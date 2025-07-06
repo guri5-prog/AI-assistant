@@ -94,7 +94,7 @@ def model_documents(question, text, pdf):
     db, text = chunk_and_split_document(pdf)
     retriever = db.as_retriever(search_kwargs={"k": 4})
 
-    pipe = pipeline('text2text-generation', model='google/flan-t5-base')
+    pipe = pipeline('text2text-generation', model='google/flan-t5-small', max_new_tokens=500)
     llm = HuggingFacePipeline(pipeline=pipe)
 
     qa = RetrievalQA.from_chain_type(llm=llm, chain_type='map_reduce', retriever=retriever, return_source_documents=True)
@@ -151,7 +151,7 @@ def model(question, text):
     db, text = chunk_and_split(text)
     retriever = db.as_retriever(search_kwargs={"k": 4})
 
-    pipe = pipeline('text2text-generation', model='google/flan-t5-base')
+    pipe = pipeline('text2text-generation', model='google/flan-t5-small', max_new_tokens=500 )
     llm = HuggingFacePipeline(pipeline=pipe)
 
     qa = RetrievalQA.from_chain_type(llm=llm, chain_type='map_reduce', retriever=retriever, return_source_documents=True)
