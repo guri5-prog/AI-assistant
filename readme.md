@@ -37,17 +37,6 @@ It uses NLP, embeddings, vector databases, and large language models to understa
 4. A **retriever-augmented generation (RAG)** pipeline powered by a **Flan-T5 model** answers the question.
 5. Sources and extracted documents are shown alongside the answer.
 
----
-
-## 📸 Screenshots
-
-> *(Add screenshots of your UI if you want)*
-
----
-
-## 🚀 Deployment
-
-This app can be easily deployed using [Render](https://render.com).
 
 ### Example Render Build Settings:
 
@@ -113,12 +102,6 @@ python app.py
 * `PyMuPDF`
 * `pytube`
 * `youtube-transcript-api`
-
----
-
-## 🌐 Demo
-
-🔗 Live app: [https://your-render-link](https://your-render-link)
 
 ---
 
